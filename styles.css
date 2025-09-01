@@ -1,0 +1,61 @@
+/* Fonts & Base */
+body { font-family: 'Lato', sans-serif; margin:0; padding:0; color:#333; line-height:1.6; }
+h1,h2,h3 { font-family:'Montserrat', sans-serif; }
+
+/* Header */
+header { position: sticky; top:0; z-index:100; background:#0a0a0a; padding:1em 2em; }
+.navbar { display:flex; justify-content:space-between; align-items:center; }
+.nav-links { list-style:none; display:flex; gap:1.5em; }
+.nav-links li a { color:white; text-decoration:none; font-weight:bold; transition:0.3s; }
+.nav-links li a:hover { color:gold; }
+.btn { background:gold; color:black; padding:0.6em 1.5em; border-radius:5px; text-decoration:none; font-weight:bold; }
+
+/* Hero */
+.hero { height:100vh; background:url('https://source.unsplash.com/1600x900/?office,technology') center/cover no-repeat; display:flex; justify-content:center; align-items:center; text-align:center; color:white; }
+.hero-content { background:rgba(0,0,0,0.6); padding:2em; border-radius:10px; }
+.hero-btn { font-size:1.2rem; }
+
+/* Sections */
+section { padding:4em 2em; text-align:center; }
+
+/* Services */
+.service-cards { display:flex; flex-wrap:wrap; gap:2em; justify-content:center; margin-top:2em; }
+.card { background:white; padding:2em; border-radius:10px; width:250px; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:0.3s; }
+.card:hover { transform:translateY(-10px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+.card img { width:60px; margin-bottom:1em; }
+
+/* Portfolio */
+.portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5em; margin-top:2em; }
+.project-card { position:relative; overflow:hidden; border-radius:10px; }
+.project-card img { width:100%; display:block; transition:transform 0.5s; }
+.project-card:hover img { transform:scale(1.05); }
+.overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); color:white; opacity:0; display:flex; flex-direction:column; justify-content:center; align-items:center; transition:opacity 0.3s; }
+.project-card:hover .overlay { opacity:1; }
+
+/* Testimonials */
+.carousel { max-width:600px; margin:auto; position:relative; }
+.testimonial { display:none; }
+.testimonial.active { display:block; }
+.testimonial p { font-style:italic; }
+
+/* Newsletter */
+#newsletter input { padding:0.8em; border:1px solid #ccc; border-radius:5px; width:60%; max-width:300px; }
+#newsletter button { padding:0.8em 1.5em; background:gold; color:black; border:none; border-radius:5px; cursor:pointer; margin-left:0.5em; }
+
+/* Contact Form */
+form { display:flex; flex-direction:column; gap:1em; max-width:400px; margin:auto; }
+input, textarea { padding:0.8em; border:1px solid #ccc; border-radius:5px; }
+button { padding:1em; background:#0a0a0a; color:white; border:none; border-radius:5px; cursor:pointer; }
+
+/* Footer */
+footer { background:#0a0a0a; color:white; text-align:center; padding:2em; }
+.socials a { color:gold; text-decoration:none; margin:0 0.5em; }
+
+/* Live Chat */
+.chat-button { position:fixed; bottom:20px; right:20px; background:gold; color:black; padding:1em; border-radius:50%; cursor:pointer; font-size:1.5rem; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+
+/* Responsive */
+@media (max-width:768px) {
+  .service-cards { flex-direction:column; align-items:center; }
+  #newsletter input { width:100%; margin-bottom:1em; }
+}
